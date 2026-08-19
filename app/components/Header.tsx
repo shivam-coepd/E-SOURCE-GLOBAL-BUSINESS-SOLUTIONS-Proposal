@@ -2,7 +2,7 @@ const links = [
   { href: "#model", label: "Dual-Wing Model" },
   { href: "#landscape", label: "Market" },
   { href: "#roadmap", label: "Execution Plan" },
-  { href: "#contact", label: "Get Started" }
+  // { href: "#contact", label: "Get Started" }
 ];
 
 export default function Header() {
@@ -27,12 +27,12 @@ export default function Header() {
             </a>
           ))}
         </nav>
-        <a
+        {/* <a
           href="#contact"
           className="rounded-full bg-ink px-4 py-2 text-sm font-medium text-wax transition hover:bg-navy-deep"
         >
           Request the deck
-        </a>
+        </a> */}
       </div>
     </header>
   );
