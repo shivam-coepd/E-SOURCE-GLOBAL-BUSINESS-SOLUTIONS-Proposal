@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+html,
+body {
+  background-color: #f7eeda;
+  color: #1b1a17;
+}
+
+body {
+  background-image: radial-gradient(circle at 1px 1px, rgba(27, 26, 23, 0.07) 1px, transparent 0);
+  background-size: 22px 22px;
+}
+
+/* Hexagon cell — the recurring "honeycomb" unit used for icons, markers and dividers */
+.hex {
+  clip-path: polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0% 50%);
+}
+
+.hex-outline {
+  clip-path: polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0% 50%);
+}
+
+/* Thin honeycomb seam used as a section divider, echoes the hex grid without repeating it */
+.comb-seam {
+  background-image: repeating-linear-gradient(
+    120deg,
+    rgba(27, 26, 23, 0.14) 0px,
+    rgba(27, 26, 23, 0.14) 1px,
+    transparent 1px,
+    transparent 46px
+  );
+}
+
+.wing-underline {
+  background-image: linear-gradient(90deg, currentColor 0%, transparent 100%);
+  height: 2px;
+}
+
+::selection {
+  background-color: #f2a93b;
+  color: #1b1a17;
+}
+
+/* Visible keyboard focus, kept consistent with the accent system */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #c97a1a;
+  outline-offset: 3px;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: reveal-in 0.7s ease-out forwards;
+}
+
+@keyframes reveal-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
