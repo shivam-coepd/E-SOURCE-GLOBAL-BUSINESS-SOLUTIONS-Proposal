@@ -15,7 +15,7 @@ export default function Home() {
         <DualWing />
         <Landscape />
         <Roadmap />
-        <ContactCta />
+        {/* <ContactCta /> */}
       </main>
       <Footer />
     </>
